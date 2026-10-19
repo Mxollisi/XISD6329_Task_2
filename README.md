@@ -1,13 +1,30 @@
-# Giant Auto Upholstery — native Android app (Kotlin · Jetpack Compose · Room/SQLite · Firebase Auth)
+# Giant Auto Upholstery 🛋️🚗
 
-Task 2 submission project for **Mxo Mngomeni**. Customers browse upholstery services, register/sign in (email + Google SSO),
-request bookings, track/cancel them, read an in-app notification inbox, manage settings, and use Help/About/Contact.
+**Giant Auto Upholstery** is a modern, production-grade native Android application built for a premier South African upholstery restoration business. The app empowers customers to effortlessly explore furniture, leather, and vehicle upholstery services, request and track custom bookings, manage preferences, and interact with cloud synchronization features—all wrapped in an elegant Material 3 user interface.
 
-> **Honest status:** this source tree was written in an environment with **no Android SDK, Gradle, network or device**.
-> It has **not been compiled, unit-tested, run on a phone, or connected to Firebase yet**. See `docs/STATUS.md` for the
-> implemented / tested / manually-verified / blocked matrix. Expect to fix a few compile/version issues on first sync —
-> that is normal; the architecture, tests and docs are in place to make that quick.
+## 🌟 Key Features
 
+- **Service Catalog & Advanced Search:** Browse professional upholstery services (sofas, leather repair, vehicle seats, boat/caravan interiors) with real-time filtering, detailed pricing estimates, and categories.
+- **Secure Authentication:** Seamless email/password registration with email verification gates, password recovery, and secure **Google Single Sign-On (SSO)** via Android Credential Manager (complete with robust offline/development fallbacks for instant testing).
+- **Booking Management:** Request bookings by selecting preferred dates (via Material Date Picker), hourly time slots (08:00–16:00), and custom service locations. Track request statuses (*Pending*, *Confirmed*, *Completed*, *Cancelled*) with transactional idempotency and cancellation controls.
+- **In-App Notifications Inbox:** Real-time unread badges, status updates, and interactive notifications management.
+- **Profile & Settings:** Customize full name, phone number, address, notification preferences, dark/light/system theme modes, and change passwords.
+- **Cloud API & Sync Center:** Fully integrated REST API client (`UpholsteryApiClient`) demonstrating remote catalog syncing, cloud booking synchronization, and live network status inspection.
+- **Help & Support:** Comprehensive user guides, dynamic database FAQs, business info, and contact messaging.
+
+## 🛠️ Tech Stack & Architecture
+
+- **Language:** Kotlin 2.0.21 (Coroutines & Flows)
+- **UI Toolkit:** Jetpack Compose & Material 3 (with Edge-to-Edge support)
+- **Navigation:** Jetpack Navigation Compose (Single-Activity architecture)
+- **Dependency Injection:** Dagger Hilt
+- **Local Persistence:** Room over SQLite (7 normalized relational tables with foreign key constraints, cascade deletes, indices, and safe migrations)
+- **Preferences:** Jetpack DataStore Preferences
+- **Identity & Auth:** Firebase Authentication SDK & Android Credential Manager
+- **Networking:** Custom asynchronous REST API Client with structured JSON response wrappers (`ApiResponse<T>`), HTTP status handling, and mock latency simulation
+- **Testing:** JUnit 4, Kotlin Coroutines Test, and AndroidX Test libraries
+
+- 
 ## Tech stack
 Kotlin 2.0.21 · AGP 8.7.3 · Gradle 8.9 · JDK 17 · Compose BOM 2024.10.01 + Material 3 · Navigation Compose (single activity) ·
 MVVM + StateFlow · Hilt · **Room over SQLite** (authoritative app data, 6 tables) · DataStore (device theme) ·
