@@ -1,0 +1,27 @@
+{
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "giant-auto-upholstery-placeholder",
+    "storage_bucket": "giant-auto-upholstery-placeholder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "android_client_info": { "package_name": "za.co.giantautoupholstery" }
+      },
+      "oauth_client": [
+        { "client_id": "000000000000-placeholder.apps.googleusercontent.com", "client_type": 3 }
+      ],
+      "api_key": [ { "current_key": "PLACEHOLDER_API_KEY_REPLACE_WITH_YOUR_OWN" } ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            { "client_id": "000000000000-placeholder.apps.googleusercontent.com", "client_type": 3 }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

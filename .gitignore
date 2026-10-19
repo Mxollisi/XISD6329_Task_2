@@ -1,0 +1,14 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+build/
+captures/
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+# Real Firebase config is private to each developer / CI secret. Only the .example is committed.
+app/google-services.json

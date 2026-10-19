@@ -1,0 +1,58 @@
+Work Item Type,Title 1,Title 2,Title 3,Description,Acceptance Criteria,Tags
+Epic,Authentication & accounts,,,,,giant-auto
+User Story,,Register with email and confirm address,,"As a customer I can register with name, email and a strong password and confirm my email.",Weak passwords rejected inline; verification email sent; unverified users cannot start a session.,giant-auto
+Task,,,Implement RegisterScreen + AuthViewModel,,,giant-auto
+Task,,,Integrate Firebase email verification,,,giant-auto
+Task,,,Unit-test validation and VM,,,giant-auto
+User Story,,"Sign in, Google SSO and session restore",,As a customer I can sign in with email or Google and stay signed in.,Safe error messages; Google works via Credential Manager; session restored after restart; logout works.,giant-auto
+Task,,,Implement LoginScreen,,,giant-auto
+Task,,,Configure SHA fingerprints/OAuth client,,,giant-auto
+Task,,,Manual test on physical phone,,,giant-auto
+User Story,,Password recovery and change,,As a customer I can reset or change my password.,Reset email sent; change requires current password; Google-only accounts see a clear message.,giant-auto
+Task,,,Forgot-password screen,,,giant-auto
+Task,,,Settings password change with reauthentication,,,giant-auto
+Epic,Service catalogue,,,,,giant-auto
+User Story,,"Browse, search and filter services",,As a guest I can browse and filter the 10 services.,Search by name/description; filter All/Sofa/Leather/Auto/Chairs; prices in rand; empty/loading/error states.,giant-auto
+Task,,,Room services table + seed,,,giant-auto
+Task,,,ServicesScreen + ViewModel,,,giant-auto
+Task,,,Filter unit tests,,,giant-auto
+User Story,,Service details and booking entry,,As a customer I can open a service and start a booking.,Details show duration and 'from' price; guests are sent to sign-in and returned to the same booking form.,giant-auto
+Task,,,ServiceDetailScreen,,,giant-auto
+Task,,,Navigation guard + pending route,,,giant-auto
+Task,,,Navigation UI test,,,giant-auto
+Epic,Bookings,,,,,giant-auto
+User Story,,Create a booking request,,As a customer I can request a booking.,Date tomorrow+ (Africa/Johannesburg); times 08:00-16:00; address 5-200; terms accepted; unique reference shown after commit; no duplicates on retry.,giant-auto
+Task,,,NewBookingScreen + form VM,,,giant-auto
+Task,,,Transactional create + notification,,,giant-auto
+Task,,,Idempotency + rollback tests,,,giant-auto
+User Story,,View and cancel bookings,,As a customer I can see Upcoming/Past and cancel Pending bookings.,Upcoming/Past rules; confirm dialog; Cancelled persisted; cancellation notification; cannot cancel twice.,giant-auto
+Task,,,BookingsScreen/Detail,,,giant-auto
+Task,,,Atomic cancel DAO,,,giant-auto
+Task,,,Cancel tests,,,giant-auto
+Epic,Notifications & settings,,,,,giant-auto
+User Story,,Notification inbox,,As a customer I see and manage notifications.,Newest first; unread dot/count; mark one/all read; delete; persists.,giant-auto
+Task,,,NotificationsScreen,,,giant-auto
+Task,,,Owner-scoped DAO,,,giant-auto
+Task,,,Tests,,,giant-auto
+User Story,,Profile and settings,,"As a customer I can edit profile, preferences and theme.",Validation; persistence after force-stop; theme System/Light/Dark; permission handling API 33+.,giant-auto
+Task,,,SettingsScreen,,,giant-auto
+Task,,,Profile DAO + DataStore,,,giant-auto
+Task,,,Persistence test,,,giant-auto
+Epic,Database integrity & account isolation,,,,,giant-auto
+User Story,,Six-table Room database with 10+ records each,,As the developer I can demonstrate stored data.,FKs/indices/unique constraints; fixtures give >=10 rows per table; counts verified in Database Inspector.,giant-auto
+Task,,,Entities/DAOs,,,giant-auto
+Task,,,DevFixtures + cleanup,,,giant-auto
+Task,,,Database Inspector evidence,,,giant-auto
+User Story,,Account isolation,,As a customer my data is hidden from other accounts on the same phone.,All private queries scoped to verified UID; account A cannot read or cancel account B's rows.,giant-auto
+Task,,,Isolation tests,,,giant-auto
+Task,,,Document client-side limits,,,giant-auto
+Epic,"DevOps, documentation and demonstration",,,,,giant-auto
+User Story,,GitHub Actions CI,,As a team we build and test on every PR.,"Unit tests, lint, assembleDebug; artifacts uploaded; instrumentation job runs.",giant-auto
+Task,,,android-ci.yml,,,giant-auto
+Task,,,Add GOOGLE_SERVICES_JSON secret,,,giant-auto
+User Story,,Documentation and user support,,As a user I have help and guides.,"In-app Help (10+ FAQs), README, user guide, architecture, test plan.",giant-auto
+Task,,,Write docs,,,giant-auto
+Task,,,Review for accuracy,,,giant-auto
+User Story,,Physical-phone demonstration video,,As a student I submit a professional demo.,"Recorded on real phone with voice-over; shows features, DB data, CI and board; no secrets visible.",giant-auto
+Task,,,Rehearse using DEMO_SCRIPT,,,giant-auto
+Task,,,"Record, edit, export",,,giant-auto
