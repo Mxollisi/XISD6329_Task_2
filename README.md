@@ -24,7 +24,7 @@
 - **Networking:** Custom asynchronous REST API Client with structured JSON response wrappers (`ApiResponse<T>`), HTTP status handling, and mock latency simulation
 - **Testing:** JUnit 4, Kotlin Coroutines Test, and AndroidX Test libraries
 
-- 
+  
 ## Tech stack
 Kotlin 2.0.21 · AGP 8.7.3 · Gradle 8.9 · JDK 17 · Compose BOM 2024.10.01 + Material 3 · Navigation Compose (single activity) ·
 MVVM + StateFlow · Hilt · **Room over SQLite** (authoritative app data, 6 tables) · DataStore (device theme) ·
